@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, View} from 'react-native';
 import  Counter from 'react-native-counter'
 
 export default class App extends Component {
@@ -17,14 +17,13 @@ export default class App extends Component {
       <View style={styles.container}>
         <Counter
           end={21}                        // REQUIRED End of the counter
-          start={0.9 * 21}                     // Beginning of the counter
-          time={2500}                   // Duration (in ms) of the counter
+          start={21}                     // Beginning of the counter
+          time={2750}                   // Duration (in ms) of the counter
           digits={2}                    // Number of digits after the comma
           easing="circOut"              // Easing function name
           onComplete={() => console.log("counter finished")}                 // Callback when the counter is completed
           style={{fontSize: 50}}      // Custom style
         />
-      
       </View>
     );
   }
